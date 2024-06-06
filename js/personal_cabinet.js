@@ -1,5 +1,5 @@
 if (!localStorage.getItem("snapshot.data")) {
-  document.location = "/";
+  document.location = "/ucast/";
 }
 
 const userInfo = JSON.parse(localStorage.getItem("snapshot.data"));
@@ -24,7 +24,7 @@ if (userInfo.fullInfo) {
   changePersonalInformation.removeAttribute("disabled");
 }
 
-import { updateDoc, doc, getDocs, db, collection } from "/js/global.js";
+import { updateDoc, doc, getDocs, db, collection } from "/ucast/js/global.js";
 
 changePersonalInformation.addEventListener("click", () => {
   openInfoPopup();
