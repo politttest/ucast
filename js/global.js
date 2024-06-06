@@ -1,4 +1,4 @@
-import { app } from "/js/firebase.js";
+import { app } from "/ucast/js/firebase.js";
 
 import { getFirestore, collection, getDoc, getDocs, doc, setDoc, updateDoc, addDoc } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js";
 
