@@ -1,4 +1,4 @@
-import { app } from "/js/firebase.js";
+import { app } from "/ucast/js/firebase.js";
 
 import { getFirestore, collection, getDoc, getDocs, doc, setDoc, updateDoc, addDoc, query, where } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js";
 
@@ -34,11 +34,11 @@ if (localStorage.getItem("snapshot.data")) {
 
 logOutButton.addEventListener("click", () => {
   localStorage.clear();
-  document.location = "/";
+  document.location = "/ucast/";
 });
 
 personalCabinetButton.addEventListener("click", () => {
-  document.location = "/personal_cabinet.html";
+  document.location = "/ucast/personal_cabinet.html";
 });
 
 /* ------- FUNCTIONS ------- */
@@ -72,7 +72,7 @@ function sendUserInfoToDB(token, userInfo) {
       if (snapshot.data()) {
         console.log();
         localStorage.setItem("snapshot.data", JSON.stringify(snapshot.data()));
-        document.location = "personal_cabinet.html";
+        document.location = "ucast/personal_cabinet.html";
       } else {
         setDoc(doc(db, "Students", userId), {
           email: userInfo.email,
