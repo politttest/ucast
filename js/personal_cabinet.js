@@ -56,7 +56,7 @@ if (userInfo.fullInfo) {
   warningList.removeAttribute("disabled");
   addSubject.removeAttribute("disabled");
   createSubject.removeAttribute("disabled");
-  personalTimetable.removeAttribute("disabled");
+  // personalTimetable.removeAttribute("disabled");
 } else {
   changePersonalInformation.removeAttribute("disabled");
 }
@@ -140,7 +140,7 @@ function changeUserInfoInDB() {
       warningList.removeAttribute("disabled");
       addSubject.removeAttribute("disabled");
       createSubject.removeAttribute("disabled");
-      personalTimetable.removeAttribute("disabled");
+      // personalTimetable.removeAttribute("disabled");
 
       closeInfoPopup("infoPopup");
     });
@@ -175,7 +175,7 @@ function changeUserInfoInDB() {
       warningList.removeAttribute("disabled");
       addSubject.removeAttribute("disabled");
       createSubject.removeAttribute("disabled");
-      personalTimetable.removeAttribute("disabled");
+      // personalTimetable.removeAttribute("disabled");
 
       closeInfoPopup();
     });
