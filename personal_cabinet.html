@@ -49,7 +49,8 @@
             <div class="main_info-buttons">
               <button id="personalInformation" class="main_info-button" disabled>Dane osobowe</button>
               <button id="warningsList" class="main_info-button" disabled>Tablica ogłoszeń</button>
-              <button id="addSubject" class="main_info-button" disabled>Dodać przedmiot</button>
+              <button id="addSubject" class="main_info-button" style="display: none;" disabled>Dodać przedmiot</button>
+              <button id="createSubject" class="main_info-button" style="display: none;" disabled>Stwórz przedmiot</button>
               <button id="personalTimetable" class="main_info-button" disabled>Plany zajęć</button>
             </div>
           </div>
@@ -65,38 +66,82 @@
         <p id="infoPopupCloseButton" class="close-button"><span></span><span></span></p>
         <div class="popup_personal_info-container">
           <p class="popup_personal_info-main_text">Dane osobowe</p>
-          <form action="" id="personalInformationForm" class="personal_information_form">
-            <div class="personal_information_form-blocks">
-              <div class="personal_information_form-block">
-                <label for="name" class="personal_information_form-label">Imię<span>*</span></label>
-                <input type="text" name="name" class="personal_information_form-input" required />
+          <form action="" id="personalInformationForm" class="personal_info_form">
+            <div class="personal_info_form-blocks">
+              <div class="personal_info_form-block">
+                <label for="name" class="personal_info_form-label">Imię<span>*</span></label>
+                <input type="text" name="name" class="personal_info_form-input" required />
               </div>
-              <div class="personal_information_form-block">
-                <label for="surname" class="personal_information_form-label">Nazwisko<span>*</span></label>
-                <input type="text" name="surname" class="personal_information_form-input" required />
+              <div class="personal_info_form-block">
+                <label for="surname" class="personal_info_form-label">Nazwisko<span>*</span></label>
+                <input type="text" name="surname" class="personal_info_form-input" required />
               </div>
-              <div class="personal_information_form-block">
-                <label for="dateBirthday" class="personal_information_form-label">Data urodzenia<span>*</span></label>
-                <input type="date" name="dateBirthday" class="personal_information_form-input" required />
+              <div class="personal_info_form-block">
+                <label for="dateBirthday" class="personal_info_form-label">Data urodzenia<span>*</span></label>
+                <input type="date" name="dateBirthday" class="personal_info_form-input" required />
               </div>
-              <div class="personal_information_form-block">
-                <label for="specialization" class="personal_information_form-label">Kierunek<span>*</span></label>
-                <select name="specialization" id="specializations" class="personal_information_form-input"></select>
+              <div class="personal_info_form-block">
+                <label for="specialization" class="personal_info_form-label">Kierunek<span>*</span></label>
+                <select name="specialization" id="personalInfoSpecializations" class="personal_info_form-input"></select>
               </div>
-              <div class="personal_information_form-block">
-                <label for="email" class="personal_information_form-label">Email</label>
-                <input type="email" name="email" class="personal_information_form-input" disabled />
+              <div class="personal_info_form-block">
+                <label for="email" class="personal_info_form-label">Email</label>
+                <input type="email" name="email" class="personal_info_form-input" disabled />
               </div>
-              <div class="personal_information_form-block">
-                <label for="phone" class="personal_information_form-label">Telefon<span>*</span></label>
-                <input type="number" name="phone" class="personal_information_form-input" required />
+              <div class="personal_info_form-block">
+                <label for="phone" class="personal_info_form-label">Telefon<span>*</span></label>
+                <input type="number" name="phone" class="personal_info_form-input" required />
               </div>
-              <div class="personal_information_form-block">
-                <label for="imageUrl" class="personal_information_form-label">Image URL</label>
-                <input type="url" name="imageUrl" class="personal_information_form-input" />
+              <div class="personal_info_form-block">
+                <label for="imageUrl" class="personal_info_form-label">Image URL</label>
+                <input type="url" name="imageUrl" class="personal_info_form-input" />
               </div>
             </div>
-            <button class="personal_information_form-button_sumbit" id="personalInformationFormSubmitButton" type="submit">Submit</button>
+            <button class="personal_info_form-button_sumbit" id="personalInformationFormSubmitButton" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="createSubjectPopup" class="popup_create_subject" style="display: none">
+      <div class="section-container">
+        <p id="createSubjectPopupCloseButton" class="close-button"><span></span><span></span></p>
+        <div class="popup_create_subject-container">
+          <p class="popup_create_subject-main_text">Stworzenie przedmiotu</p>
+          <form action="" id="createSubjectForm" class="create_subject_form">
+            <div class="create_subject_form-blocks">
+              <div class="create_subject_form-block">
+                <label for="name" class="create_subject_form-label">Przedmiot<span>*</span></label>
+                <input type="text" name="name" class="create_subject_form-input" required />
+              </div>
+              <div class="create_subject_form-block">
+                <label for="subject_description" class="create_subject_form-label">Opis przedmiotu<span>*</span></label>
+                <input required name="subject_description" class="create_subject_form-input"></select>
+              </div>
+              <div class="create_subject_form-block">
+                <label for="kod" class="create_subject_form-label">Kod przedmiotu<span>*</span></label>
+                <input type="number" name="kod" class="create_subject_form-input" required />
+              </div>
+            </div>
+            <button class="create_subject_form-button_sumbit" id="createSubjectFormSubmitButton" type="submit">Stworzyć przedmiot</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="addSubjectPopup" class="popup_add_subject" style="display: none">
+      <div class="section-container">
+        <p id="addSubjectPopupCloseButton" class="close-button"><span></span><span></span></p>
+        <div class="popup_add_subject-container">
+          <p class="popup_add_subject-main_text">Dodawania przedmiotu</p>
+          <form action="" id="addSubjectForm" class="add_subject_form">
+            <div class="add_subject_form-blocks">
+              <div class="add_subject_form-block">
+                <label for="kod" class="add_subject_form-label">Kod przedmiotu<span>*</span></label>
+                <input type="number" name="kod" class="add_subject_form-input" required />
+              </div>
+            </div>
+            <button class="add_subject_form-button_sumbit" id="addSubjectFormSubmitButton" type="submit">Dodać przedmiot</button>
           </form>
         </div>
       </div>
