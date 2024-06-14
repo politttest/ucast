@@ -1,12 +1,12 @@
-import { app } from "/ucast/js/firebase.js";
+import { app } from "/js/firebase.js";
 
-import { getFirestore, collection, getDoc, getDocs, doc, setDoc, updateDoc, addDoc } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js";
+import { getFirestore, collection, getDoc, getDocs, doc, setDoc, updateDoc, addDoc, query, where } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js";
 
 const db = getFirestore();
 
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
 
-export { updateDoc, doc, db, getDocs, collection };
+export { updateDoc, doc, db, getDoc, getDocs, collection, setDoc, addDoc, query, where };
 
 const provider = new GoogleAuthProvider();
 
@@ -33,13 +33,13 @@ if (localStorage.getItem("snapshot.data")) {
 }
 
 logOutButton.addEventListener("click", () => {
-  localStorage.removeItem("snapshot.data");
-  document.location = "/ucast/"
-})
+  localStorage.clear();
+  document.location = "/";
+});
 
 personalCabinetButton.addEventListener("click", () => {
-  document.location = "/ucast/personal_cabinet.html"
-})
+  document.location = "/personal_cabinet.html";
+});
 
 /* ------- FUNCTIONS ------- */
 
@@ -72,7 +72,7 @@ function sendUserInfoToDB(token, userInfo) {
       if (snapshot.data()) {
         console.log();
         localStorage.setItem("snapshot.data", JSON.stringify(snapshot.data()));
-        document.location = "/ucast/personal_cabinet.html";
+        document.location = "personal_cabinet.html";
       } else {
         setDoc(doc(db, "Students", userId), {
           email: userInfo.email,
@@ -94,7 +94,7 @@ function sendUserInfoToDB(token, userInfo) {
             fullInfo: false,
           };
           localStorage.setItem("snapshot.data", JSON.stringify(newInfo));
-          document.location = "/ucast/personal_cabinet.html";
+          document.location = "personal_cabinet.html";
         });
       }
     })
