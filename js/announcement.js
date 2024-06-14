@@ -1,6 +1,6 @@
-import { updateDoc, doc, getDocs, db, collection } from "/js/global.js";
+import { updateDoc, doc, getDocs, db, collection } from "/ucast/js/global.js";
 
-import { downloadSpecializationsFromDB } from "/js/functions.js";
+import { downloadSpecializationsFromDB } from "/ucast/js/functions.js";
 
 downloadSpecializationsFromDB()
   .then((specializations) => {
