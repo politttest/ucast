@@ -1,4 +1,4 @@
-import { updateDoc, doc, getDocs, db, collection } from "/js/global.js";
+import { updateDoc, doc, getDocs, db, collection } from "/ucast/js/global.js";
 
 function downloadSpecializationsFromDB() {
   return new Promise((resolve, reject) => {
