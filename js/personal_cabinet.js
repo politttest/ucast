@@ -1,9 +1,9 @@
 if (!localStorage.getItem("snapshot.data")) {
-  document.location = "/";
+  document.location = "/ucast/";
 }
 
-import { downloadSpecializationsFromDB, openInfoPopup, closeInfoPopup } from "/js/functions.js";
-import { updateDoc, doc, getDoc, db, collection, setDoc, addDoc, getDocs, query, where } from "/js/global.js";
+import { downloadSpecializationsFromDB, openInfoPopup, closeInfoPopup } from "/ucast/js/functions.js";
+import { updateDoc, doc, getDoc, db, collection, setDoc, addDoc, getDocs, query, where } from "/ucast/js/global.js";
 
 const userInfo = JSON.parse(localStorage.getItem("snapshot.data"));
 
@@ -78,7 +78,7 @@ infoPopupCloseButton.addEventListener("click", () => {
   closeInfoPopup("infoPopup");
 });
 warningList.addEventListener("click", () => {
-  document.location = "/announcement.html";
+  document.location = "/ucast/announcement.html";
 });
 
 addSubject.addEventListener("click", () => {
