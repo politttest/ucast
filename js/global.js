@@ -72,7 +72,7 @@ function sendUserInfoToDB(token, userInfo) {
       if (snapshot.data()) {
         console.log();
         localStorage.setItem("snapshot.data", JSON.stringify(snapshot.data()));
-        document.location = "ucast/personal_cabinet.html";
+        document.location = "/ucast/personal_cabinet.html";
       } else {
         setDoc(doc(db, "Students", userId), {
           email: userInfo.email,
@@ -94,7 +94,7 @@ function sendUserInfoToDB(token, userInfo) {
             fullInfo: false,
           };
           localStorage.setItem("snapshot.data", JSON.stringify(newInfo));
-          document.location = "personal_cabinet.html";
+          document.location = "/ucast/personal_cabinet.html";
         });
       }
     })
