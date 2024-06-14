@@ -1,0 +1,135 @@
+.announcement {
+  margin-top: 50px;
+  margin-bottom: 250px;
+}
+
+.announcement .section-container .announcement-container {
+  padding: 30px 50px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px 0;
+}
+
+.announcement .section-container .announcement-container .announcement-main_text {
+  width: 100%;
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  font-size: 32px;
+  margin-bottom: 70px;
+}
+
+.announcement .section-container .announcement-container .announcement-buttons {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.announcement .section-container .announcement-container .announcement-buttons .announcement-button {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  display: block;
+  height: 50px;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.announcement .section-container .announcement-container .announcement-buttons .announcement-button:enabled:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.announcement .section-container .announcement-container .announcement-buttons .announcement-button:last-child {
+  margin-top: 30px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-bottom: 30px;
+}
+
+.popup_announcement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  min-height: 100%;
+  width: 100%;
+  padding-right: 21px;
+  position: fixed;
+}
+
+.popup_announcement .section-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  position: relative;
+}
+
+.popup_announcement .section-container .popup_announcement-container {
+  max-height: 70%;
+  overflow: auto;
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+  padding: 20px 50px;
+}
+
+.popup_announcement .section-container .popup_announcement-container .popup_announcement-main_text {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.popup_announcement .section-container .close-button {
+  display: block;
+  border-radius: 50%;
+  width: 40px;
+  margin-bottom: 20px;
+  height: 40px;
+  background-color: hwb(0 100% 0%/0.5);
+  border: 2px solid #fff;
+  position: relative;
+  margin-left: auto;
+}
+
+.popup_announcement .section-container .close-button span {
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  border-radius: 10px;
+  display: block;
+  background-color: #000;
+}
+
+.popup_announcement .section-container .close-button span:first-child {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 18px;
+  left: 4px;
+}
+
+.popup_announcement .section-container .close-button span:last-child {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 18px;
+  left: 4px;
+}
+
+.popup_announcement .section-container .close-button:hover {
+  cursor: pointer;
+  background-color: hwb(0 100% 0%/0.7);
+}
